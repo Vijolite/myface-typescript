@@ -6,7 +6,15 @@
 <ol>
     <% results.forEach(function(user) {%>
         <li>
-            <%= user.name %>
+            <p>
+                <b><%= user.name %></b>
+                (<%= user.username %>)
+                <a href="/users/<%= user.id %>">
+                    <img src ="<%= user.profileImageUrl %>" alt = "<%= user.name %>" width="25" height="25">
+                </a>
+                <br>
+                Email: <%= user.email %>
+            </p>
         </li>
     <% }); %>
 </ol>

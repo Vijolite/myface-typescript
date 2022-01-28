@@ -7,9 +7,28 @@
     <% results.forEach(function(post) {%>
         <li>
             <%= post.message %>
+            <img src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
+            <ul>
+                <li>
+                <b><i>Created by <%= post.postedBy.name %></i></b>
+                </li>
+                <li>
+                <i>Liked by <%= post.likedBy.name %></i>
+                </li>
+                <li>
+                <i>Disliked by <%= post.dislikedBy.name %></i>
+                </li>
+            </ul>
+        
         </li>
     <% }); %>
 </ol>
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %>
 </body>
 <%- include('_footer') -%>
 </html>

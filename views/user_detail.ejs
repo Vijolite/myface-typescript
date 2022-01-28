@@ -1,8 +1,21 @@
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
+<style>
+    body {
+      background-image: url('<%= coverImageUrl%>');
+    }
+</style>
 <body>
-<h1><%= name %></h1>
+<h1><%= name %> <img src ="<%= profileImageUrl %>" alt = "<%= name %>" width="150" height="150"></h1>
+<p>
+    (<%= username %>)
+</p>
+
+<p>
+    Email: <%= email %>  
+</p>
+
 </body>
 <%- include('_footer') -%>
 </html>
