@@ -1,22 +1,22 @@
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
-<body>
+<body class='main_content'>
 <h1>Posts</h1>
-<ol>
+<ol class="post_list">
     <% results.forEach(function(post) {%>
-        <li>
+        <li class="post">
             <%= post.message %>
             <img src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
             <ul>
-                <li>
-                <b><i>Created by <%= post.postedBy.name %></i></b>
+                <li class="post_postedBy">
+                Created by <%= post.postedBy.name %>
                 </li>
                 <li>
-                <i>Liked by <%= post.likedBy.name %></i>
+                Liked by <%= post.likedBy.name %>
                 </li>
                 <li>
-                <i>Disliked by <%= post.dislikedBy.name %></i>
+                Disliked by <%= post.dislikedBy.name %>
                 </li>
             </ul>
         
@@ -24,10 +24,10 @@
     <% }); %>
 </ol>
 <%if (next) { %>
-    <a href="<%= next %>">Next</a>
+    <a class = "menu" href="<%= next %>">Next</a>
 <% } %>
 <%if (previous) { %>
-    <a href="<%= previous %>">Previous</a>
+    <a class = "menu" href="<%= previous %>">Previous</a>
 <% } %>
 </body>
 <%- include('_footer') -%>

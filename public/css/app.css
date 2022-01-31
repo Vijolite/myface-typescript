@@ -1,1 +1,114 @@
 /* Add your styles here. */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #272F3A;
+    color: #f3eceb;
+}
+/*
+.main_content {
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (min-width: 600px) {
+    .main_content {
+        width: calc((100%-1em)/2);
+    }
+}
+@media (min-width: 900px) {
+    .main_content {
+        width: calc((100%-2em)/3);
+    }
+}
+*/
+.menu {
+    color: #7F9BAE;
+}
+h1 {
+    color: #6B9FD1;
+    font-style: normal;
+}
+.user_list {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.user {
+    position:relative;
+    background: #2D6DAB;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    /*align-content: center;*/
+    /*align-items: center;*/
+    /*align-self: center;*/
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (min-width: 600px) {
+    .user {
+        /*width: calc((100%-10em)/2);*/
+        width: calc((95%)/2);
+    }
+}
+@media (min-width: 900px) {
+    .user {
+        width: calc((95%)/3);
+    }
+}
+.user .user_user_name {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.user .user_user_email {
+    font-style: italic;
+}
+.user .user_user_img {
+    position: absolute;
+    left:20px;
+    top:20px;
+}
+.user_main_details {
+    background: #2D6DAB;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 50%;
+}
+.post_list {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post {
+    background: #2D6DAB;
+    padding: 1em;
+    /*margin-bottom: 1em;
+    margin-left: 1em;*/
+    border-style: solid;
+    border-color: rgb(238, 216, 119);
+    border-width: 0.1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (min-width: 600px) {
+    .post {
+        /*width: calc((100%-10em)/2);*/
+        width: calc((95%)/2);
+    }
+}
+@media (min-width: 900px) {
+    .post {
+        /*width: calc((100%)/3);*/
+        width: calc((95%)/3);
+    }
+}
+.post ul{
+    font-style: italic;
+    padding-top: 1em;
+    font-size: 0.6rem;
+}
+.post .post_postedBy{
+    font-size: 0.8rem;
+}
+
