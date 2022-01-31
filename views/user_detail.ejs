@@ -1,23 +1,38 @@
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
+<!--
 <style>
     body {
       background-image: url('<%= coverImageUrl%>');
     }
 </style>
+-->
 <body>
-<img src ="<%= profileImageUrl %>" alt = "<%= name %>" width="150" height="150">
-<div class="user_main_details">
-    <h1><%= name %></h1>
-    <p>
-        (<%= username %>)
-    </p>
-
-    <p>
-        Email: <%= email %>  
-    </p>
+<div class="user_main_top">
+    <div class="user_main_background">
+        <img src ="<%= coverImageUrl %>" alt = "<%= name %>" width="100%" height="100%">
+    
+        <div class="user_main_details">
+            <!--<img class="user_main_img" src ="<%= profileImageUrl %>" alt = "<%= name %>" width="150" height="150">-->
+            <img class="user_main_img" src ="<%= profileImageUrl %>" alt = "<%= name %>" >
+            <h1><%= name %></h1>
+            <p class="user_main_add_info">
+                (<%= username %>)
+            </p>
+        
+            <p class="user_main_add_info">
+                Email: <%= email %>  
+            </p>
+        
+        </div>
+    </div>
 </div>
+
+
+    
+    
+    
 </body>
 <%- include('_footer') -%>
 </html>

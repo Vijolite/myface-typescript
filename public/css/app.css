@@ -38,10 +38,8 @@ h1 {
     background: #2D6DAB;
     padding: 0.5em;
     margin-bottom: 1em;
-    /*align-content: center;*/
-    /*align-items: center;*/
-    /*align-self: center;*/
-    text-align: center;
+    /*text-align: center;*/
+    text-align: right;
     width: 100%;
     box-sizing: border-box;
 }
@@ -67,40 +65,93 @@ h1 {
     position: absolute;
     left:20px;
     top:20px;
+    border-radius: 50%;
 }
-.user_main_details {
+.user_main_top {
+    
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_main_background {
+    /*
     background: #2D6DAB;
     padding: 0.5em;
     margin-bottom: 1em;
     width: 50%;
+    */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    /*border: solid;*/
+}
+@media (min-width: 600px) {
+    .user_main_background {
+        width: 90%;
+    }
+}
+@media (min-width: 900px) {
+    .user_main_backgroundls {
+        width: 80%;
+    }
+}
+.user_main_img {
+    position: absolute;
+    /*left:-90;*/
+    top:0;
+    left:-100;
+    height: 100;
+    width: 100;
+    border-radius: 50%;
+}
+@media (min-width: 600px) {
+    .user_main_img {
+        top:0;
+        left:-160;
+        height: 150;
+        width: 150;
+    }
+}
+.user_main_details {
+    position: absolute;
+    width: 70%;
+    right:0;
+    bottom:-80px;
+    background: rgba(39, 47, 58, .5); /*transparent*/
+}
+.user_main_add_info {
+    font-size: 0.8rem;
 }
 .post_list {
-    display: flex;
-    
+    display: flex;   
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    /*justify-content: space-between;*/
 }
 .post {
     background: #2D6DAB;
     padding: 1em;
-    /*margin-bottom: 1em;
-    margin-left: 1em;*/
+    margin-bottom: 1em;
+    /*margin-left: 1em;*/
     border-style: solid;
     border-color: rgb(238, 216, 119);
     border-width: 0.1em;
-    width: 100%;
+    width: 99%;
     box-sizing: border-box;
 }
 @media (min-width: 600px) {
     .post {
         /*width: calc((100%-10em)/2);*/
-        width: calc((95%)/2);
+        width: calc((100%-2em)/2);
     }
 }
 @media (min-width: 900px) {
     .post {
         /*width: calc((100%)/3);*/
-        width: calc((95%)/3);
+        /*width: calc((100%-3em)/3);*/
+        width: calc(95%/3);
     }
 }
 .post ul{
