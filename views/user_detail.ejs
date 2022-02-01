@@ -1,13 +1,8 @@
 <html lang="en-gb">
+<header>
 <%- include('_head') -%>
 <%- include('_header') -%>
-<!--
-<style>
-    body {
-      background-image: url('<%= coverImageUrl%>');
-    }
-</style>
--->
+</header>
 <body>
 <div class="user_main_top">
     <div class="user_main_background">
@@ -20,17 +15,48 @@
             <p class="user_main_add_info">
                 (<%= username %>)
             </p>
-        
             <p class="user_main_add_info">
                 Email: <%= email %>  
             </p>
-        
         </div>
     </div>
 </div>
 
+<br><br><br>
 
-    
+<div class="user_content">
+<div class="user_main_middle">    
+    <div class="user_posts_created">
+        <h2 class="user_main_add_info">Posts created:</h2>
+        <ol class="post_list">
+            <% posts.forEach(function(post) {%>
+                <li class="post">    
+                    <img class="post_img" src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
+                    <div class="post_message"> 
+                            <%= post.message %> 
+                    </div>
+                </li>
+            <% }); %>
+        </ol>
+    </div>
+</div>
+
+<div class="user_main_last">    
+    <div class="user_posts_created">
+        <h2 class="user_main_add_info">Posts liked:</h2>
+        <ol class="post_list">
+            <% likes.forEach(function(post) {%>
+                <li class="post">    
+                    <img class="post_img" src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
+                    <div class="post_message"> 
+                            <%= post.message %> 
+                    </div>
+                </li>
+            <% }); %>
+        </ol>
+    </div>
+</div>
+</div>
     
     
 </body>

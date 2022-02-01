@@ -6,19 +6,23 @@
 <ol class="post_list">
     <% results.forEach(function(post) {%>
         <li class="post">
-            <%= post.message %>
-            <img src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
-            <ul>
-                <li class="post_postedBy">
-                Created by <%= post.postedBy.name %>
-                </li>
-                <li>
-                Liked by <%= post.likedBy.length %>
-                </li>
-                <li>
-                Disliked by <%= post.dislikedBy.length %>
-                </li>
-            </ul>
+            
+            <img class="post_img" src ="<%= post.imageUrl %>" alt = "<%= post.message %>" width="50" height="50">
+            <div class="post_message"> 
+                <p class="post_postedBy">
+                    Created by <%= post.postedBy.name %>
+                </p>
+                <p>
+                    <%= post.message %> 
+                </p>
+            </div>
+            <div class="post_like">
+            
+                <p>Liked by <%= post.likedBy.length %></p>
+                
+                <p>Disliked by <%= post.dislikedBy.length %></p>
+                
+            </div>
         
         </li>
     <% }); %>
