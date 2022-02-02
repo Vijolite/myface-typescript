@@ -1,8 +1,13 @@
 <html lang="en-gb">
+<header>
 <%- include('_head') -%>
 <%- include('_header') -%>
+<button class="header_button" id="b1" >Change to Random Colours</button>
+</header>
+
 <body class='main_content'>
 <h1>Posts</h1>
+
 <ol class="post_list">
     <% results.forEach(function(post) {%>
         <li class="post">

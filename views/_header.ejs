@@ -3,4 +3,26 @@
         <a class = "menu" href="/posts">Posts</a>
         <a class = "menu" href="/users">Users</a>
     </nav>
+
+    <div id="mySidenav" class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Posts</a>
+        <a href="#">Users</a>
+        <a href="#">+ New Post</a>
+      </div>
+
+      <!-- Use any element to open the sidenav -->
+      <span class="menu but_open" onclick="openNav()">open</span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+
 </header>
